@@ -16,7 +16,6 @@ zip_file.write('Change-to-your-choosen-Directory', compress_type=zipfile.ZIP_DEF
 zip_file.write('Change-to-your-choosen-Directory', compress_type=zipfile.ZIP_DEFLATED)
 #  Zip the above file 
 zip_file.close()
-
 print("File compressed") 
 
 #The mail addresses and password, in this example i'm using a gmail
@@ -34,29 +33,29 @@ print("Email Login Successful")
 mail_content = '''
 		Demo content
 	'''
-
 #Setup global the MIME
 message = MIMEMultipart()
 message['Subject'] = 'Demo subject'
-print("Email Subject Created")
+print("Email subject entered")
 
 #Body and the attachments for the mail
 message.attach(MIMEText(mail_content, 'plain'))
 #You'll need to change the directory to your file's location
-attach_file_name = '/Users/lennisluigi/Desktop/Test.zip'
+attach_file_name = 'ENTER-DIRECTORY-OF-COMPRESSED-FILE-HERE'
 attach_file = open(attach_file_name, 'rb') # Open the file as binary mode
 payload = MIMEBase('application', 'octate-stream')
 payload.set_payload((attach_file).read())
 encoders.encode_base64(payload) #encode the attachment
 payload.add_header('Content-Disposition', 'attachment', filename=attach_file_name)
 message.attach(payload)
+print("File attached to email")
 
 #Create SMTP session 
 session = smtplib.SMTP(smtp_server, smtp_port)
 session.starttls() #enable security
 session.login(sender_address, sender_pass) #login
 text = message.as_string()
-print("SMTP Session ceated and secuirty enabled")
+print("SMTP Session")
 
 #mail addresses of receivers
 mails = ['Receiver@hotmail.co.uk', 'Receiver@gmail.com']
@@ -68,6 +67,5 @@ for receiver_address in mails:
 	session.sendmail(sender_address, receiver_address, text)
 	print('Mail Sent: '+receiver_address)
 
-print("Everything worked :D")
-
+print("Script Done")
 session.quit()

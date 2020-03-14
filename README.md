@@ -9,7 +9,7 @@ This python script compresses the file size, zips the selected files and email t
 <li>pip install smtplib</li>
 <p></p>
 
-<p>Alternatively pip install -r requirements.txt</p>
+<p>Alternatively pip install -r Requirements.txt</p>
 <p></p>
 
 

@@ -6,4 +6,5 @@ This python script reduces the file size, zips the selected files and email them
 <li>pip install pyautogui</li>
 <li>pip install smtplib</li>
 <p></p>
-Alternatively pip install -r requirements.txt 
+
+<p>Alternatively pip install -r requirements.txt</p>

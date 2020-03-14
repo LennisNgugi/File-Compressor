@@ -5,8 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-
-print("Don't worry it's working, it just takes a few seconds")
+ 
 zip_file = zipfile.ZipFile('Test.zip', 'w')
 #  The Directory of the file can be found my opening a terminal 'cd' into the correct folder then enter 'pwd' and copy below: 
 zip_file.write('Change-to-your-choosen-Directory', compress_type=zipfile.ZIP_DEFLATED)

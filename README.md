@@ -8,3 +8,7 @@ This python script reduces the file size, zips the selected files and email them
 <p></p>
 
 <p>Alternatively pip install -r requirements.txt</p>
+<p></p>
+
+
+![](Compressor.GIF)

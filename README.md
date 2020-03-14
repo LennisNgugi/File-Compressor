@@ -1,5 +1,6 @@
 # File Compressor
 This python script reduces the file size, zips the selected files and email them in seconds
+<p>Encryption of files will be implemented soon :D</p> 
 
 # Requirements
 <li>pip install zipfile</li> 

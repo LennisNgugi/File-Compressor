@@ -11,4 +11,4 @@ This python script reduces the file size, zips the selected files and email them
 <p></p>
 
 
-![](Compressor.GIF)
+![](Compress.GIF)
